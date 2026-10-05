@@ -16,7 +16,7 @@ class LLM:
     def __init__(
         self,
         model: str,
-        base_url: str = "http://localhost:11434/v1",
+        base_url: str,
         api_key: str = "no_key",
         think: bool = False,
         temperature: float | None = None,
