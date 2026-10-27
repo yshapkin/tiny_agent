@@ -1,6 +1,6 @@
 from .agent import TinyAgent
 from .llm import LLM
-from .memory import Memory
+from .memory import SummarizationMemory
 
 
 def main() -> None:
@@ -10,7 +10,7 @@ def main() -> None:
         temperature=0.8,
         think=True
     )
-    memory = Memory()
+    memory = SummarizationMemory(llm=llm)
     agent = TinyAgent(llm=llm, memory=memory)
 
     conversation = [
